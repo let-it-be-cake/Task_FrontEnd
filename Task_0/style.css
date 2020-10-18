@@ -1,0 +1,151 @@
+html,
+body {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.header {
+    background-image: url("Images/header-bg.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.content {
+    margin-top: 200px;
+    text-align: center;
+    padding: 0 auto 0 auto;
+    color: white;
+}
+
+.content>h1 {
+    font-size: 65px;
+    font-family: Oswald, sans-serif;
+}
+
+.content>h3 {
+    font-size: 40px;
+    font-family: "EB Garamond", serif;
+    font-style: oblique;
+    font-weight: 100;
+}
+
+#header-logo {
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+#sign-buttons {
+    right: 40px;
+    top: 10px;
+    position: absolute;
+}
+
+.sign-button {
+    color: white;
+    background-color: transparent;
+    padding: 8px 15px;
+    border-radius: 22px;
+    border: 2px solid white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.sign-up {
+    display: block;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: #000000aa;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    animation-duration: 0.55s;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInDown {
+
+    /* Сама анимация */
+    0% {
+        /* Старт анимации */
+        opacity: 0;
+        transform: translate3d(0px, -100%, 0px);
+    }
+
+    100% {
+        /* в финале анимации - финал это заданная 0.55s */
+        opacity: 1;
+        transform: none;
+    }
+}
+
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    margin: 100px auto;
+
+    max-width: 600px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: "EB Garamond", serif;
+    font-size: 17px;
+}
+
+#sign-up-form>h3{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#sign-up-form> div{
+    display:  flex;
+    flex-direction: column;
+}
+
+#sign-up-form>div> div, input {
+    margin: 5px auto;
+    width: 550px;
+}
+
+#sign-up-form>div>button {
+    margin: 5px auto;
+    font-size: 14px;
+    border-radius: 13px;
+    padding: 7px 15px;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+#sign-up-content{
+    margin-left: 0;
+
+    background-color: white;
+    max-width: 800px;
+}
+
+.warning{
+    color: red;
+    font-size: 12px;
+}

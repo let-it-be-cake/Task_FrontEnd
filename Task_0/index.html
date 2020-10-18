@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav id="sign-buttons">
+            <button id="sign-in-button" class="sign-button">Sign in</button>
+            <button id="sign-up-button" class="sign-button">Sign up</button>
+        </nav>
+        <div class="container">
+            <div class="logo">
+                <img id="header-logo" src="Images/logo.png " alt=" ">
+            </div>
+            <div class="content">
+                <h1>Minimal Theme Site</h1>
+                <br>
+                <h3>Hello it's my site</h3>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <div class="popup">
+        <div class="sign-up hidden">
+            <form id="sign-up-form" action="">
+                <h3>Sign Up</h3>
+                <div>
+                    <div class="sign-up-text">
+                        <lable for="sign-up-name">Enter your name</lable>
+                        <span class="warning">
+                            * The length of the name must be greater than 5 but less than 35
+                        </span>
+                    </div>
+                    <input placeholder="Ivanov Ivan" pattern="[ a-zA-Z0-9]{5,35}" id="sign-up-name" type="text" required>
+
+                    <div class="sign-up-text">
+                        <lable for="sign-up-email">Enter your email</lable>
+                        <span class="warning">
+                            * Enter the correct mailbox
+                        </span>
+                    </div>
+                    <input placeholder="example@email.com" pattern=".+@.+\..+" id="sign-up-email" type="email" required>
+
+                    <div class="sign-up-text">
+                        <lable for="sign-up-password">Enter your password</lable>
+                        <span class="warning">
+                            * Only numbers, Latin letters, and underscores are allowed in the
+                            password</span>
+                    </div>
+                    <input placeholder="eXaMpLe_PaSsWoRd987" pattern="[_a-zA-Z0-9]{6,}" id="sign-up-password"
+                        type="password" required>
+
+                    <button type="submit">Sigh up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#sign-up-button")
+            .addEventListener(
+                'click',
+                () => document.querySelector(".sign-up").classList.toggle("hidden")
+            );
+
+        document.querySelector(".sign-up").addEventListener('click', function (e) {
+            this == e.target ? this.classList.toggle("hidden") : null;
+        });
+    </script>
+    <script src="validation.js"></script>
+</body>
+
+</html>
